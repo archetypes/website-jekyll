@@ -10,3 +10,11 @@ h3. Lorem ipsum sed aliquam
 Etiam vehicula, augue eu ultricies dictum, orci nisi suscipit sem, nec sollicitudin neque est ac massa. Phasellus elementum nibh vel odio. Proin orci nulla, viverra tempus, pharetra ut, varius nec, justo. Donec euismod molestie erat. Nulla lobortis bibendum magna. Nulla adipiscing justo eu erat.
 
 Phasellus elementum nibh vel odio. Proin orci nulla, viverra tempus, pharetra ut, varius nec, justo. Donec euismod molestie erat.
+
+
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+
