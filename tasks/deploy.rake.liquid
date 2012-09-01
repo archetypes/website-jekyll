@@ -1,13 +1,17 @@
 
+{% if staging_server %}
 namespace :demo do
+  desc "Deploy to the staging server"
   task :deploy do
     sh "rm -Rf _site"
     sh "jekyll --url {{ staging_url }}"
     sh "rsync -va --delete _site/ {{ staging_server }}"
   end
 end
+{% endif %}
 
 namespace :prod do
+  desc "Deploy to the production server"
   task :deploy do
     sh "rm -Rf _site"
     sh "jekyll --url {{ production_url }}"
