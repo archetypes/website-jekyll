@@ -9,3 +9,7 @@ To use the archetype,
     ${EDITOR:=nano} properties.yaml
     # Initialize the template
     ./init.rb
+
+## Reference
+
+ - [Jekyll Documentation](https://github.com/mojombo/jekyll)
